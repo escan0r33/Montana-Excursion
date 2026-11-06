@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montana Excursion - Marrakech Excursions & Desert Tours</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#D97706',
+                            darkOrange: '#B45309',
+                            terracotta: '#C2410C',
+                            blue: '#0284C7',
+                            darkBlue: '#0F172A',
+                            sand: '#FFFBEB',
+                            sandDark: '#F59E0B'
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts - Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animations CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.65), rgba(194, 65, 12, 0.45)), 
+                        url('hero.jpg') center/cover no-repeat;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-shadow:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 35px -5px rgba(217, 119, 6, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen overflow-x-hidden">
+
+    <!-- Header Navigation -->
+    <header id="header" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-brand-orange text-white rounded-full flex items-center justify-center text-2xl overflow-hidden shadow-md transition-transform hover:rotate-6">
+                    <img src="foto8.jpg" alt="Logo" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <span class="text-2xl font-black text-brand-darkBlue tracking-tight block">MONTANA <span class="text-brand-orange">EXCURSION</span></span>
+                    <span class="text-[10px] text-gray-500 font-bold uppercase tracking-widest block -mt-1">Marrakech Travel & Adventures</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-7 font-bold text-gray-700 text-sm">
+                <a href="#hero" class="hover:text-brand-orange transition-colors">Home</a>
+                <a href="#trips" class="hover:text-brand-orange transition-colors">Our Activities & Trips</a>
+                <a href="#private-tours" class="hover:text-brand-orange transition-colors">Private Tours</a>
+                <a href="#why-us" class="hover:text-brand-orange transition-colors">Why Choose Us?</a>
+                <a href="#reviews" class="hover:text-brand-orange transition-colors">Customer Reviews</a>
+            </nav>
+
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="https://wa.me/212622361841?text=Hello%20Montana%20Excursion,%20I%20would%20like%20to%20inquire%20about%20your%20activities%20and%20prices." target="_blank" class="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-5 py-2.5 rounded-xl transition-all shadow-md hover:shadow-emerald-500/20 text-sm hover:scale-105">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Contact Us Now</span>
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none p-2" aria-label="Open Menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-6 space-y-3">
+            <a href="#hero" class="block py-2 text-gray-700 hover:text-brand-orange font-bold">Home</a>
+            <a href="#trips" class="block py-2 text-gray-700 hover:text-brand-orange font-bold">Our Activities & Trips</a>
+            <a href="#private-tours" class="block py-2 text-gray-700 hover:text-brand-orange font-bold">Private Tours</a>
+            <a href="#why-us" class="block py-2 text-gray-700 hover:text-brand-orange font-bold">Why Choose Us?</a>
+            <a href="https://instagram.com/montana_excursion" target="_blank" class="flex items-center gap-2 py-2 text-pink-600 font-bold">
+                <i class="fa-brands fa-instagram text-xl"></i>
+                <span>Follow Us on Instagram</span>
+            </a>
+            <a href="https://wa.me/212622361841?text=Hello%20Montana%20Excursion,%20I%20would%20like%20to%20inquire%20about%20your%20trips." target="_blank" class="w-full flex items-center justify-center gap-2 bg-emerald-500 text-white font-bold py-3 rounded-xl shadow-sm text-sm">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Contact Us on WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section id="hero" class="relative hero-bg min-h-[88vh] flex items-center justify-center text-white px-4 py-20 text-center">
+            <div class="max-w-4xl mx-auto space-y-6" data-aos="zoom-in" data-aos-duration="1000">
+                <span class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md text-white font-bold text-xs sm:text-sm px-4 py-2 rounded-full border border-white/20 shadow-md">
+                    <i class="fa-solid fa-star text-amber-400"></i>
+                    <span>Welcome to Montana Excursion in Marrakech</span>
+                </span>
+                
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black leading-tight sm:leading-tight">
+                    Discover the Best Activities and Trips in <span class="text-amber-400 underline decoration-brand-orange">Marrakesh</span>
+                </h1>
+                
+                <p class="text-base sm:text-2xl text-gray-200 max-w-2xl mx-auto font-light leading-relaxed">
+                    From hot air balloon rides and quad biking in the Palm Grove to Agafay Desert evenings, waterfalls, and Merzouga desert. Enjoy exceptional experiences.
+                </p>
+
+                <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#trips" class="w-full sm:w-auto bg-brand-orange hover:bg-brand-darkOrange text-white font-bold text-lg px-8 py-4 rounded-xl shadow-xl hover:shadow-brand-orange/40 transition-all flex items-center justify-center gap-3 hover:scale-105">
+                        <span>Explore Activities & Trips</span>
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+                    <a href="https://wa.me/212622361841?text=Hello%20Montana%20Excursion,%20I%20would%20like%20to%20ask%20about%20your%20special%20offers." target="_blank" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-xl transition-all flex items-center justify-center gap-3 hover:scale-105">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>Ask About Prices & Offers</span>
+                    </a>
+                </div>
+
+                <div class="pt-8 flex items-center justify-center gap-6 text-sm sm:text-base font-semibold text-gray-200 flex-wrap">
+                    <span class="flex items-center gap-2 bg-black/40 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10">
+                        <i class="fa-solid fa-phone text-amber-400"></i>
+                        <span dir="ltr">+212 622-361841</span>
+                    </span>
+                    <a href="https://instagram.com/montana_excursion" target="_blank" class="flex items-center gap-2 bg-black/40 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10 hover:text-amber-400 transition-colors">
+                        <i class="fa-brands fa-instagram text-pink-400"></i>
+                        <span>montana_excursion</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activities Section -->
+        <section id="trips" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+                <span class="text-brand-orange font-bold text-sm tracking-wider uppercase bg-brand-sand px-4 py-1.5 rounded-full inline-block mb-3 border border-brand-orange/20">
+                    The Best Experiences in Marrakech
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-black text-brand-darkBlue">Available Activities & Trips</h2>
+                <p class="text-gray-600 mt-3 text-base sm:text-lg">Contact us to discover offers and prices tailored to you, your family, or your group.</p>
+            </div>
+
+            <!-- Grid of Trips -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- 1. Quad Palmerie -->
+                <div class="bg-white rounded-3xl overflow-hidden card-shadow border border-gray-100 flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-60 overflow-hidden group">
+                        <img src="foto1.jpg" alt="Quad Palmerie" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <span class="absolute top-4 right-4 bg-brand-orange text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg z-10">
+                            Adventure & Excitement
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">Quad Palmerie (Palm Grove Quad)</h3>
+                            <p class="text-gray-500 text-sm mb-4">An exciting quad or buggy ride through the Palm Grove oasis and its beautiful landscapes with traditional tea.</p>
+                            <div class="space-y-2 border-t border-gray-100 pt-3 text-xs sm:text-sm text-gray-600">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-clock text-brand-orange w-4"></i><span>Activity duration: 2 hours</span></div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-shield-halved text-brand-orange w-4"></i><span>Safety equipment provided</span></div>
+                            </div>
+                        </div>
+                        <button onclick="openBookingModal('Quad Palmerie')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Contact Us for Pricing</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. Hot Air Balloon -->
+                <div class="bg-white rounded-3xl overflow-hidden card-shadow border border-gray-100 flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-60 overflow-hidden group">
+                        <img src="foto2.jpg" alt="Hot Air Balloon" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <span class="absolute top-4 right-4 bg-brand-blue text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg z-10">
+                            VIP Royal Experience
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">Hot Air Balloon Ride</h3>
+                            <p class="text-gray-500 text-sm mb-4">Fly over Marrakech and the Atlas Mountains at sunrise. An unforgettable experience featuring a traditional breakfast in a Berber tent.</p>
+                            <div class="space-y-2 border-t border-gray-100 pt-3 text-xs sm:text-sm text-gray-600">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-sun text-brand-orange w-4"></i><span>Morning flight at sunrise</span></div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-utensils text-brand-orange w-4"></i><span>Includes Berber breakfast</span></div>
+                            </div>
+                        </div>
+                        <button onclick="openBookingModal('Hot Air Balloon Ride')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Contact Us for Pricing</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3. Agafay Desert -->
+                <div class="bg-white rounded-3xl overflow-hidden card-shadow border border-gray-100 flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-60 overflow-hidden group">
+                        <div id="slider-agafay" class="flex transition-transform duration-500 ease-in-out h-full">
+                            <img src="agafar/foto11.jpg" alt="Agafay 1" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="agafar/foto22.jpg" alt="Agafay 2" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="agafar/foto33.jpg" alt="Agafay 3" class="w-full h-full object-cover flex-shrink-0">
+                        </div>
+                        <button onclick="moveSlide('slider-agafay', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                        </button>
+                        <button onclick="moveSlide('slider-agafay', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                        <span class="absolute top-4 right-4 bg-amber-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg z-10">
+                            Desert Dinner & Evening
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">Agafay Desert Excursion</h3>
+                            <p class="text-gray-500 text-sm mb-4">A breathtaking sunset in Agafay, camel ride, luxury tajine dinner, and live show performance.</p>
+                            <div class="space-y-2 border-t border-gray-100 pt-3 text-xs sm:text-sm text-gray-600">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-moon text-brand-orange w-4"></i><span>Evening under the stars</span></div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-drum text-brand-orange w-4"></i><span>Live Gnawa & Fire show</span></div>
+                            </div>
+                        </div>
+                        <button onclick="openBookingModal('Agafay Desert')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Contact Us for Pricing</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4. Cascades Ouzoud -->
+                <div class="bg-white rounded-3xl overflow-hidden card-shadow border border-gray-100 flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-60 overflow-hidden group">
+                        <div id="slider-ouzoud" class="flex transition-transform duration-500 ease-in-out h-full">
+                            <img src="cascad ouzod/foto11.jpg" alt="Ouzoud 1" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="cascad ouzod/foto22.jpg" alt="Ouzoud 2" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="cascad ouzod/foto33.jpg" alt="Ouzoud 3" class="w-full h-full object-cover flex-shrink-0">
+                        </div>
+                        <button onclick="moveSlide('slider-ouzoud', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                        </button>
+                        <button onclick="moveSlide('slider-ouzoud', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                        <span class="absolute top-4 right-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg z-10">
+                            Nature & Waterfalls
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">Ouzoud Waterfalls Trip</h3>
+                            <p class="text-gray-500 text-sm mb-4">A full-day trip to discover the highest waterfalls in Morocco, walk in nature, and see wild monkeys.</p>
+                            <div class="space-y-2 border-t border-gray-100 pt-3 text-xs sm:text-sm text-gray-600">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-water text-brand-orange w-4"></i><span>Full-day trip</span></div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-person-walking text-brand-orange w-4"></i><span>Guided walk with local guide</span></div>
+                            </div>
+                        </div>
+                        <button onclick="openBookingModal('Cascades Ouzoud')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Contact Us for Pricing</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 5. Cascades Imlil -->
+                <div class="bg-white rounded-3xl overflow-hidden card-shadow border border-gray-100 flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-60 overflow-hidden group">
+                        <div id="slider-imlil" class="flex transition-transform duration-500 ease-in-out h-full">
+                            <img src="cascad imlil/foto11.jpg" alt="Imlil 1" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="cascad imlil/foto22.jpg" alt="Imlil 2" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="cascad imlil/foto33.jpg" alt="Imlil 3" class="w-full h-full object-cover flex-shrink-0">
+                        </div>
+                        <button onclick="moveSlide('slider-imlil', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                        </button>
+                        <button onclick="moveSlide('slider-imlil', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                        <span class="absolute top-4 right-4 bg-teal-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg z-10">
+                            Atlas Mountains
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">Imlil & Ourika Valley</h3>
+                            <p class="text-gray-500 text-sm mb-4">Explore Berber villages, fresh river valleys, and mountain trekking at the foothills of Toubkal.</p>
+                            <div class="space-y-2 border-t border-gray-100 pt-3 text-xs sm:text-sm text-gray-600">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-mountain text-brand-orange w-4"></i><span>Atlas Mountain View</span></div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-utensils text-brand-orange w-4"></i><span>Riverside Berber Lunch</span></div>
+                            </div>
+                        </div>
+                        <button onclick="openBookingModal('Imlil Valley')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Contact Us for Pricing</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 6. Merzouga -->
+                <div class="bg-white rounded-3xl overflow-hidden card-shadow border border-gray-100 flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-60 overflow-hidden group">
+                        <div id="slider-merzouga" class="flex transition-transform duration-500 ease-in-out h-full">
+                            <img src="merzoga/foto11.jpg" alt="Merzouga 1" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="merzoga/foto22.jpg" alt="Merzouga 2" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="merzoga/foto33.jpg" alt="Merzouga 3" class="w-full h-full object-cover flex-shrink-0">
+                        </div>
+                        <button onclick="moveSlide('slider-merzouga', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                        </button>
+                        <button onclick="moveSlide('slider-merzouga', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                        <span class="absolute top-4 right-4 bg-yellow-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg z-10">
+                            Sahara Desert Tour
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">Merzouga Sahara Dunes</h3>
+                            <p class="text-gray-500 text-sm mb-4">Multi-day trip into the golden dunes of Erg Chebbi, camel trekking, and camping under desert stars.</p>
+                            <div class="space-y-2 border-t border-gray-100 pt-3 text-xs sm:text-sm text-gray-600">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-campground text-brand-orange w-4"></i><span>Luxury Desert Camp</span></div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-sun text-brand-orange w-4"></i><span>Sunrise over Dunes</span></div>
+                            </div>
+                        </div>
+                        <button onclick="openBookingModal('Merzouga Desert Tour')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Contact Us for Pricing</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 7. Ouarzazate -->
+                <div class="bg-white rounded-3xl overflow-hidden card-shadow border border-gray-100 flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-60 overflow-hidden group">
+                        <div id="slider-warzazat" class="flex transition-transform duration-500 ease-in-out h-full">
+                            <img src="warzazat/foto11.jpg" alt="Ouarzazate 1" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="warzazat/foto22.jpg" alt="Ouarzazate 2" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="warzazat/foto33.jpg" alt="Ouarzazate 3" class="w-full h-full object-cover flex-shrink-0">
+                        </div>
+                        <button onclick="moveSlide('slider-warzazat', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                        </button>
+                        <button onclick="moveSlide('slider-warzazat', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                        <span class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg z-10">
+                            Kasbahs & Cinema
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">Ouarzazate & Ait Benhaddou</h3>
+                            <p class="text-gray-500 text-sm mb-4">Visit the Hollywood of Africa, UNESCO Kasbah Ait Benhaddou, and historic cinema studios.</p>
+                            <div class="space-y-2 border-t border-gray-100 pt-3 text-xs sm:text-sm text-gray-600">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-film text-brand-orange w-4"></i><span>Atlas Film Studios</span></div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-building text-brand-orange w-4"></i><span>UNESCO World Heritage</span></div>
+                            </div>
+                        </div>
+                        <button onclick="openBookingModal('Ouarzazate Tour')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Contact Us for Pricing</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 8. Old Medina & Jemaa El-Fna -->
+                <div class="bg-white rounded-3xl overflow-hidden card-shadow border border-gray-100 flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-60 overflow-hidden group">
+                        <img src="foto5.jpg" alt="Old Medina" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <span class="absolute top-4 right-4 bg-purple-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg z-10">
+                            Culture & History
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">The Old Medina & Jemaa el-Fnaa Tour</h3>
+                            <p class="text-gray-500 text-sm mb-4">Explore the historic souks of Marrakech, Bahia Palace, Koutoubia Mosque, and Jemaa el-Fnaa square.</p>
+                            <div class="space-y-2 border-t border-gray-100 pt-3 text-xs sm:text-sm text-gray-600">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-map-location-dot text-brand-orange w-4"></i><span>Certified official guide</span></div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-store text-brand-orange w-4"></i><span>Traditional souks & monuments</span></div>
+                            </div>
+                        </div>
+                        <button onclick="openBookingModal('Old Medina Tour')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Contact Us for Pricing</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 9. Camel Ride & Buggy Combo -->
+                <div class="bg-white rounded-3xl overflow-hidden card-shadow border border-gray-100 flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-60 overflow-hidden group">
+                        <img src="foto6.jpg" alt="Camel Ride and Buggy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <span class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg z-10">
+                            Complete Combo Package
+                        </span>
+                    </div>
+
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">Camel Ride + Buggy / Quad Combo</h3>
+                            <p class="text-gray-500 text-sm mb-4">The perfect blend of tradition and adventure! Camel ride with desert outfits followed by a quad or buggy adventure.</p>
+                            <div class="space-y-2 border-t border-gray-100 pt-3 text-xs sm:text-sm text-gray-600">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-cubes text-brand-orange w-4"></i><span>Two activities combined</span></div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-van-shuttle text-brand-orange w-4"></i><span>Free pick-up and drop-off</span></div>
+                            </div>
+                        </div>
+                        <button onclick="openBookingModal('Camel & Buggy Combo')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Contact Us for Pricing</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Private Tours Special Section -->
+        <section id="private-tours" class="py-16 bg-gradient-to-r from-brand-darkBlue via-slate-900 to-brand-darkBlue text-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" data-aos="fade-up">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <span class="inline-block bg-brand-orange/30 text-amber-300 border border-brand-orange/40 font-bold text-xs sm:text-sm px-4 py-1.5 rounded-full">
+                            💎 Exclusive Private Tours
+                        </span>
+                        <h2 class="text-3xl sm:text-5xl font-black leading-tight">
+                            Would you like a private trip for you, your family, or your friends?
+                        </h2>
+                        <p class="text-gray-300 text-base sm:text-lg leading-relaxed">
+                            At <strong>Montana Excursion</strong>, we provide private tourist vehicles (VIP minivans and 4x4s) with a private driver and guide. We create an itinerary that suits your schedule.
+                        </p>
+                        <ul class="space-y-3 text-sm text-gray-200">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i><span>100% customized itinerary based on your requests</span></li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i><span>Luxury vehicles and professional drivers</span></li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i><span>Ideal for families, special occasions, and private groups</span></li>
+                        </ul>
+                        <div class="pt-2">
+                            <a href="https://wa.me/212622361841?text=Hello%20Montana%20Excursion,%20I%20would%20like%20to%20inquire%20about%20a%20Private%20Tour." target="_blank" class="inline-flex items-center gap-3 bg-brand-orange hover:bg-brand-darkOrange text-white font-bold text-lg px-8 py-4 rounded-xl shadow-xl transition-all hover:scale-105">
+                                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                                <span>Request a Customized Private Tour</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl">
+                            <img src="foto7.jpg" alt="Private Tour Marrakech" class="w-full h-[400px] object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section id="why-us" class="py-20 bg-brand-sand/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                    <span class="text-brand-orange font-bold text-sm tracking-wider uppercase bg-white px-4 py-1.5 rounded-full inline-block shadow-sm mb-3">
+                        Professional Service
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-darkBlue">Why Choose Montana Excursion?</h2>
+                    <p class="text-gray-600 mt-3">We are committed to providing the best travel experience in Marrakech and the surrounding area, with the highest standards of quality and comfort.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 text-center space-y-4 hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-16 h-16 rounded-2xl bg-amber-100 text-brand-orange flex items-center justify-center text-3xl mx-auto">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Punctuality & Organization</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">We respect schedules and ensure every activity and trip is carefully organized.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 text-center space-y-4 hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-16 h-16 rounded-2xl bg-blue-100 text-brand-blue flex items-center justify-center text-3xl mx-auto">
+                            <i class="fa-solid fa-shield-heart"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Safety & Comfort</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Comfortable transport fleet and high-quality safety equipment for all activities.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 text-center space-y-4 hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-16 h-16 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl mx-auto">
+                            <i class="fa-solid fa-comments-dollar"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Best Offers & Prices</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Competitive prices for individuals, families, and groups, with no hidden fees.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 text-center space-y-4 hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="400">
+                        <div class="w-16 h-16 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center text-3xl mx-auto">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Fast Support 24/7</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Our team is always available on WhatsApp to answer your questions and arrange your trips.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Reviews -->
+        <section id="reviews" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-brand-orange font-bold text-sm tracking-wider uppercase bg-brand-sand px-4 py-1.5 rounded-full inline-block mb-3">
+                    Customer Testimonials
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-darkBlue">What Our Travelers Say</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm space-y-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-1 text-amber-400">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm italic leading-relaxed">"The quad biking experience in Palm Grove was amazing! Excellent service!"</p>
+                    <div class="font-bold text-gray-900 text-sm border-t pt-3">Hamza Al Massoudi</div>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm space-y-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center gap-1 text-amber-400">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm italic leading-relaxed">"Agafay desert tour was unforgettable. Transport, dinner, show were perfect!"</p>
+                    <div class="font-bold text-gray-900 text-sm border-t pt-3">Meryem Al Mansouri</div>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm space-y-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center gap-1 text-amber-400">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm italic leading-relaxed">"Merzouga desert trip was seamless and well organized. Highly recommended."</p>
+                    <div class="font-bold text-gray-900 text-sm border-t pt-3">Anouar El Amrani</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-darkBlue text-white pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Brand Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+    <div class="w-10 h-10 rounded-xl bg-brand-orange flex items-center justify-center text-white text-xl font-bold overflow-hidden">
+        <img src="foto8.jpg" alt="Logo" class="w-full h-full object-cover">
+    </div>
+    <span class="text-2xl font-black tracking-tight">MONTANA <span class="text-brand-orange">EXCURSION</span></span>
+</div>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        An agency specializing in organizing the best activities, desert excursions, and private tours in Marrakech and throughout Morocco.
+                    </p>
+                    <div class="flex gap-3 pt-2">
+                        <a href="https://instagram.com/montana_excursion" target="_blank" class="w-10 h-10 rounded-full bg-white/10 hover:bg-pink-600 flex items-center justify-center transition-colors text-lg"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/212622361841" target="_blank" class="w-10 h-10 rounded-full bg-white/10 hover:bg-emerald-500 flex items-center justify-center transition-colors text-lg"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Activities -->
+                <div>
+                    <h4 class="text-lg font-bold text-amber-400 mb-4">Our Activities in Marrakech</h4>
+                    <ul class="space-y-2.5 text-sm text-gray-300">
+                        <li><a href="#trips" class="hover:text-brand-orange transition-colors">Quad & Buggy Palmerie</a></li>
+                        <li><a href="#trips" class="hover:text-brand-orange transition-colors">Hot Air Balloon Ride</a></li>
+                        <li><a href="#trips" class="hover:text-brand-orange transition-colors">Agafay Desert Dinner & Show</a></li>
+                        <li><a href="#trips" class="hover:text-brand-orange transition-colors">Ouzoud & Ourika Waterfalls</a></li>
+                        <li><a href="#trips" class="hover:text-brand-orange transition-colors">Merzouga Sahara Dunes</a></li>
+                        <li><a href="#trips" class="hover:text-brand-orange transition-colors">Old Medina & Jemaa El-Fna</a></li>
+                    </ul>
+                </div>
+
+                <!-- Private Tours -->
+                <div>
+                    <h4 class="text-lg font-bold text-amber-400 mb-4">Customized Services</h4>
+                    <ul class="space-y-2.5 text-sm text-gray-300">
+                        <li><a href="#private-tours" class="hover:text-brand-orange transition-colors">Private Tours for Families</a></li>
+                        <li><a href="#private-tours" class="hover:text-brand-orange transition-colors">Airport Transfers</a></li>
+                        <li><a href="#private-tours" class="hover:text-brand-orange transition-colors">VIP Vehicles with Private Driver</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-bold text-amber-400 mb-4">Direct Contact</h4>
+                    <div class="flex items-center gap-3 text-sm text-gray-300">
+                        <i class="fa-solid fa-phone text-brand-orange"></i>
+                        <span dir="ltr">+212 622-361841</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-sm text-gray-300">
+                        <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                        <span dir="ltr">+212 622-361841</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-sm text-gray-300">
+                        <i class="fa-brands fa-instagram text-pink-400 text-lg"></i>
+                        <a href="https://instagram.com/montana_excursion" target="_blank" class="hover:underline">montana_excursion</a>
+                    </div>
+                    <div class="flex items-start gap-3 text-sm text-gray-300">
+                        <i class="fa-solid fa-location-dot text-brand-orange mt-1"></i>
+                        <span>Marrakech, Morocco</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-6 text-center text-xs text-gray-400">
+                All rights reserved © 2026 Montana Excursion.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/212622361841?text=Hello%20Montana%20Excursion,%20I%20would%20like%20to%20inquire%20about%20your%20offers." target="_blank" class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110 group animate-bounce">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative transform transition-all">
+            <button onclick="closeBookingModal()" class="absolute top-5 left-5 text-gray-400 hover:text-gray-600 p-2 text-xl focus:outline-none">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="text-center mb-6">
+                <h3 class="text-2xl font-extrabold text-gray-900">Activity Inquiry & Booking</h3>
+            </div>
+            <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Selected Activity</label>
+                    <input type="text" id="modal-trip-name" class="w-full bg-gray-100 border border-gray-200 rounded-xl px-4 py-3 text-sm font-bold text-brand-darkBlue focus:outline-none" readonly>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Full Name *</label>
+                    <input type="text" id="modal-user-name" required placeholder="e.g. John" class="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Phone *</label>
+                        <input type="tel" id="modal-user-phone" required placeholder="06XXXXXXXX" class="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase mb-1">People</label>
+                        <select id="modal-user-count" class="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange">
+                            <option value="1">1 person</option>
+                            <option value="2">2 people</option>
+                            <option value="3-5">3–5 people</option>
+                            <option value="6+">Group (6+)</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Note or Date</label>
+                    <textarea id="modal-user-note" rows="2" placeholder="Preferred date..." class="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 mt-2">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Send Inquiry via WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- AOS JS for Scroll Animations -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize Animations with mirror enabled (animates when scrolling up & down)
+        AOS.init({
+            duration: 800,
+            once: false,
+            mirror: true,
+            offset: 100
+        });
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Booking Modal
+        const modal = document.getElementById('booking-modal');
+        const modalTripName = document.getElementById('modal-trip-name');
+
+        function openBookingModal(tripTitle) {
+            modalTripName.value = tripTitle;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeBookingModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function handleBookingSubmit(e) {
+            e.preventDefault();
+            const trip = document.getElementById('modal-trip-name').value;
+            const name = document.getElementById('modal-user-name').value;
+            const phone = document.getElementById('modal-user-phone').value;
+            const count = document.getElementById('modal-user-count').value;
+            const note = document.getElementById('modal-user-note').value;
+
+            let message = `Hello *Montana Excursion*, I would like to inquire about:%0A%0A`;
+            message += `📌 *Activity:* ${encodeURIComponent(trip)}%0A`;
+            message += `👤 *Name:* ${encodeURIComponent(name)}%0A`;
+            message += `📱 *Phone:* ${encodeURIComponent(phone)}%0A`;
+            message += `👥 *People:* ${encodeURIComponent(count)}%0A`;
+            if (note) message += `📝 *Notes/Date:* ${encodeURIComponent(note)}%0A`;
+
+            const whatsappUrl = `https://wa.me/212622361841?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+            closeBookingModal();
+        }
+
+        // Image Sliders
+        let slideIndexes = {};
+        function moveSlide(sliderId, direction) {
+            const slider = document.getElementById(sliderId);
+            if (!slider) return;
+            const totalSlides = slider.children.length;
+            if (!(sliderId in slideIndexes)) slideIndexes[sliderId] = 0;
+            slideIndexes[sliderId] = (slideIndexes[sliderId] + direction + totalSlides) % totalSlides;
+            slider.style.transform = `translateX(-${slideIndexes[sliderId] * 100}%)`;
+        }
+    </script>
+</body>
+</html>
